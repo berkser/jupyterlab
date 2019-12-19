@@ -112,7 +112,8 @@ export function shouldOverwrite(path: string): Promise<boolean> {
  */
 export function isValidFileName(name: string): boolean {
   const validNameExp = /[\/\\:]/;
-  return name.length > 0 && !validNameExp.test(name);
+  var dot = '.';
+  return name.length > 0 && !validNameExp.test(name) && name.charAt(0) !== dot;
 }
 
 /**

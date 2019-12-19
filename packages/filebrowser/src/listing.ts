@@ -1395,6 +1395,7 @@ export class DirListing extends Widget {
           Error(
             `"${newName}" is not a valid name for a file. ` +
               `Names must have nonzero length, ` +
+              `cannot start with a ".", ` +
               `and cannot include "/", "\\", or ":"`
           )
         );
